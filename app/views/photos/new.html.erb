@@ -37,8 +37,12 @@
       </div>
 
       <!-- Label and input for user_id -->
+      <div class="form-group">
+        <label for="user_id" class="control-label">
 
-        <input type="hidden" name="user_id" value="<%= current_user.id %>">
+        </label>
+
+        <input type="hidden" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= current_user.id %>">
       </div>
 
       <button class="btn btn-success">
@@ -49,3 +53,4 @@
     </form>
   </div>
 </div>
+Contact GitHub API Training Shop Blog About

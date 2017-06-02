@@ -1,6 +1,6 @@
 <div class="page-header">
   <h1>
-    All Users
+    My Likes
   </h1>
 </div>
 
@@ -11,11 +11,13 @@
         <th>User</th>
       </tr>
 
-      <% @users.each do |user| %>
-      <tr>
-        <td><%= user.username %></td>
-      </tr>
+      <% @user.liked_photos.each do |photo| %>
+
+        <dd><a href="/photos/<%= photo.id %>"><img src="<%=photo.image%>"></a></dd>
+        <dd><%= photo.caption %></dd>
       <% end %>
+
+
     </table>
   </div>
 </div>

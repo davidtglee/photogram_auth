@@ -5,18 +5,18 @@
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
-    </dl>
+      <dt>Username</dt>
+      <dd><%= @user.username %></dd>
 
-    <div class="btn-group btn-group-justified">
-      <a href="/users" class="btn btn-primary">
-        Back
-      </a>
-      <a href="/users/<%= @user.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_user/<%= @user.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
+      <dt>User's Email</dt>
+      <dd><%= @user.email %></dd>
+      <% @user.photos.each do |photo| %>
+        <dt>User's Image</dt>
+        <dd><a href="/photos/<%= photo.id %>"><img src="<%=photo.image%>"></a></dd>
+        <dd><%= photo.caption %></dd>
+      <% end %>
+
+    </dl>
     </div>
   </div>
 </div>
